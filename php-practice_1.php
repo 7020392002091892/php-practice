@@ -20,11 +20,11 @@ echo '現在時刻は、' . $date . 'です。' . "\n";
 
 $device = "windows";
 
-if($device === "windows" || $device === "mac" ){
-  echo '使用OSは、' . $device . 'です。'. "\n";
+if($device === "windows" || $device === "mac" ) {
+  echo '使用OSは、' . $device . 'です。' . "\n";
 }
 else{
-  echo 'どちらでもありません。'. "\n";
+  echo 'どちらでもありません。' . "\n";
 }
     
 // Q5 条件分岐-2 三項演算子
@@ -32,11 +32,11 @@ $age = 17;
 $message = '';
 
 $message = ($age < 18) ? '未成年です。' : '成人です。';
-echo $message. "\n";
+echo $message . "\n";
 
 // Q6 配列
 $country = ['群馬県','茨城県','栃木県','千葉県','埼玉県','東京都','神奈川県'];
-echo $country[2] . 'と' . $country[3] . 'は関東地方の都道府県です。'. "\n";
+echo $country[2] . 'と' . $country[3] . 'は関東地方の都道府県です。' . "\n";
 
 // Q7 連想配列-1
 $q7country =  [
@@ -47,17 +47,17 @@ $q7country =  [
   '栃木県' => '宇都宮市',
   '群馬県' => '前橋市',
   '茨城県' => '水戸市'
- ];
+];
 
-foreach($q7country as $value){
+foreach($q7country as $value) {
   echo $value . "\n";
 }
 
 // Q8 連想配列-2
 
-foreach($q7country as $key => $value){
-  if($key === '埼玉県'){
-    echo $key . 'の県庁所在地は、' . $value . 'です。'. "\n";
+foreach($q7country as $key => $value) {
+  if($key === '埼玉県') {
+    echo $key . 'の県庁所在地は、' . $value . 'です。' . "\n";
     break;
   }
 }
@@ -68,10 +68,10 @@ $q7country['大阪府'] = '大阪市';
 
 $kanto = ['群馬県','茨城県','栃木県','千葉県','埼玉県','東京都','神奈川県'];
 
-foreach($q7country as $key => $value){
+foreach($q7country as $key => $value) {
   $boolean = false;
-  foreach($kanto as $name){
-    if($key !== $name){
+  foreach($kanto as $name) {
+    if($key !== $name) {
       continue;
     }
 
@@ -79,18 +79,18 @@ foreach($q7country as $key => $value){
     break;
   }
   
-  if($boolean){
-    echo $key . 'の県庁所在地は、' . $value . 'です。'. "\n";
+  if($boolean) {
+    echo $key . 'の県庁所在地は、' . $value . 'です。' . "\n";
   }
   else{
-    echo $key . 'は関東地方ではありません。'. "\n";
+    echo $key . 'は関東地方ではありません。' . "\n";
   }
 }
 
 // Q10 関数-1
 function sayHello($name)
 {
-  echo $name . 'さん、こんにちは。'. "\n";
+  echo $name . 'さん、こんにちは。' . "\n";
 }
 sayHello('金谷');
 sayHello('安藤');
@@ -104,7 +104,7 @@ function calcTaxInPrice($price_default)
 }
 
 $taxInPrice = calcTaxInPrice($price);
-echo $price . '円の商品の税込価格は' .  $taxInPrice . '円です。'. "\n";
+echo $price . '円の商品の税込価格は' .  $taxInPrice . '円です。' . "\n";
 
 // Q12 関数とif文
 
