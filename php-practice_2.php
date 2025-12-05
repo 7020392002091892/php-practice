@@ -1,27 +1,22 @@
 <?php
 // Q1 tic-tac問題
-echo "<Q1>\n";
-for($i = 1; $i <= 100 ; $i++)
-{
-  if($i % 4 === 0 && $i % 5 === 0 )
-  {
+for($i = 1; $i <= 100 ; $i++){
+  if($i % 4 === 0 && $i % 5 === 0 ){
     echo 'tic-tac'."\n";
     continue;
   }
-  if($i % 4 === 0)
-  {
+  if($i % 4 === 0){
     echo 'tic'."\n";
     continue;
   }
-  if($i % 5 === 0)
-  {
+  if($i % 5 === 0){
     echo 'tac'."\n";
     continue;
   }
   
   echo $i."\n";
 }
-echo "\n</Q1>\n";
+
 // Q2 多次元連想配列
 $personalInfos = [
     [
@@ -43,28 +38,21 @@ $personalInfos = [
 $ageList = [25, 30, 18];
   
   ## 問1
-  echo "<Q2-1>\n";
-  echo $personalInfos[1]['name'] . 'の電話番号は' . $personalInfos[1]['tel'] . 'です。';
-  echo "\n</Q2-1>\n";
+  echo $personalInfos[1]['name'] . 'の電話番号は' . $personalInfos[1]['tel'] . 'です。'."\n";
 
   ## 問2
-  echo "<Q2-2>\n";
   $index = 1;
   foreach($personalInfos as $array)
   {
     echo $index.'番目の'.$array['name'] . 'の電話番号は' . $array['tel'] . 'です。' . "\n";
     $index++;
   }
-  echo "</Q2-2>\n";
   
   ## 問3
-  echo "<Q2-3>\n";
   foreach($personalInfos as $i => $array)
   {
     $personalInfos[$i]['age'] = $ageList[$i];
   }
-  var_dump($personalInfos);
-  echo "\n</Q2-3>\n";
 
 // Q3 オブジェクト-1
 class Student
@@ -83,37 +71,31 @@ class Student
     {
         echo $this->studentName.'は'.
              $lessonName . 'の授業に出席しました。学籍番号：' .
-             $this->studentId;
+             $this->studentId."\n";
     }
 }
 
-echo "<Q3>\n";
 $student = new Student(120,'山田');
 echo '学籍番号' .
      $student->studentId .
      '番の生徒は' .
      $student->studentName .
-     'です。';
-echo "\n<Q3>\n";
+     'です。'."\n";
 
 // Q4 オブジェクト-2
-echo "<Q4>\n";
 $yamada = new Student(120,'山田');
 $yamada->attend('PHP');
-echo "\n<Q4>\n";
 
 // Q5 定義済みクラス
-echo "<Q5-1>\n";
-$date = new DateTime();
-echo $date->format('Y-m-d');
-echo "\n<Q5-1>\n";
-
-echo "<Q5-2>\n";
-$day = new DateTime();
-$day2 = new DateTime('1992-04-25');
-$diff = $day->diff($day2);
-echo 'あの日から' . 
-     $diff->days .
-     '日経過しました。';
-echo "\n<Q5-2>\n";
+  ## 問1
+  $date = new DateTime();
+  echo $date->format('Y-m-d')."\n";
+  
+  ## 問2
+  $day = new DateTime();
+  $day2 = new DateTime('1992-04-25');
+  $diff = $day->diff($day2);
+  echo 'あの日から' . 
+       $diff->days .
+       '日経過しました。';
 ?>
