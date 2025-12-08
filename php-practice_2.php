@@ -1,15 +1,15 @@
 <?php
 // Q1 tic-tac問題
-for($i = 1; $i <= 100 ; $i++) {
-  if($i % 4 === 0 && $i % 5 === 0 ) {
+for ($i = 1; $i <= 100 ; $i++) {
+  if ($i % 4 === 0 && $i % 5 === 0 ) {
     echo 'tic-tac' . "\n";
     continue;
   }
-  if($i % 4 === 0) {
+  if ($i % 4 === 0) {
     echo 'tic' . "\n";
     continue;
   }
-  if($i % 5 === 0) {
+  if ($i % 5 === 0) {
     echo 'tac' . "\n";
     continue;
   }
@@ -42,15 +42,13 @@ $ageList = [25, 30, 18];
 
   ## 問2
   $index = 1;
-  foreach($personalInfos as $array)
-  {
+  foreach ($personalInfos as $array) {
     echo $index . '番目の' . $array['name'] . 'の電話番号は' . $array['tel'] . 'です。' . "\n";
     $index++;
   }
   
   ## 問3
-  foreach($personalInfos as $i => $array)
-  {
+  foreach ($personalInfos as $i => $array) {
     $personalInfos[$i]['age'] = $ageList[$i];
   }
 
@@ -95,7 +93,9 @@ $yamada->attend('PHP');
   $day = new DateTime();
   $day2 = new DateTime('1992-04-25');
   $diff = $day->diff($day2);
-  echo 'あの日から' . 
+  echo 'あの日から' .
     $diff->days .
-    '日経過しました。';
+    '日経過しました。' .
+    "\n";
+    
 ?>
